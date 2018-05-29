@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href="{% static 'css/home.css' %}">
+	<title>Django Seminário</title>
+</head>
+
+<body>
+
+	<h3>Informações sobre o dataset {{analise.dataset_name}}</h3>
+	<ul>
+		<li>temperature_max: {{temperature_max}}</li>
+		<li>temperature_min: {{temperature_min}}</li>
+		<li>ambient_pressure_max: {{ambient_pressure_max}}</li>
+		<li>ambient_pressure_min: {{ambient_pressure_min}}</li>
+		<li>relative_humidity_max: {{relative_humidity_max}}</li>
+		<li>relative_humidity_min: {{relative_humidity_min}}</li>
+		<li>exhaust_vaccum_max: {{exhaust_vaccum_max}}</li>
+		<li>exhaust_vaccum_min: {{exhaust_vaccum_min}}</li>
+		<li>net_hourly_electrical_energy_output_max: {{net_hourly_electrical_energy_output_max}}</li>
+		<li>net_hourly_electrical_energy_output_min: {{net_hourly_electrical_energy_output_min}}</li>
+	</ul>
+</body>
+</html>
+
+
+
+

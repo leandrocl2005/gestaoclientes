@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href="{% static 'css/home.css' %}">
+	<title>Django Seminário</title>
+</head>
+
+<body>
+
+	<h3>Escolha um dataset para ver a análise ou <a href={% url 'analise_new' %}>cadastre um novo</a></h3>
+	<ul>
+	{% for analise in analises %}
+		<li><a href="{% url 'analise_show' analise.id %}">{{analise.dataset_name}}</a> <br/> <a href="{% url 'analise_delete' analise.id %}">delete</a></li>
+	{% endfor %}
+	</ul>
+	
+</body>
+</html>

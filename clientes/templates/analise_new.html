@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href="{% static 'css/home.css' %}">
+	<title>Django Seminário</title>
+</head>
+
+<body>
+
+	<h1>Criando nova análise</h1>
+
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form }}
+		<button type="submit">Salvar</button>
+	</form>
+
+</body>
+</html>

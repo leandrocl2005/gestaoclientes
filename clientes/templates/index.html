@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href="{% static 'css/home.css' %}">
+	<title>Django Seminário</title>
+</head>
+
+<body>
+
+	<h1>This is a Heading</h1>
+
+	{% for person in persons %}
+		<p><a href="{% url 'persons_update' person.id %}"> {{person.first_name}} </a></p>
+		<p><a href="{% url 'persons_delete' person.id %}"> Deletar </a></p>
+	{% endfor %}
+
+	<img src="{% static 'img/origami.jpg' %}" height="400" width="400"><br/>
+
+	<a href="{% url 'persons_new' %}">Cadastrar novo</a><br/>
+
+	<a href="{% url 'logout' %}">Sair</a>
+</body>
+</html>
